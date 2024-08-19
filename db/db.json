@@ -9,6 +9,11 @@
       "id": "2",
       "nombre": "OneRepublic",
       "idioma": "Ingles"
+    },
+    {
+      "nombre": "Bruno Mars",
+      "idioma": "Español",
+      "id": "eblASlk"
     }
   ],
   "canciones": [
@@ -18,7 +23,7 @@
       "album": "Illuminate",
       "lanzamiento": "2016",
       "genero": "Pop",
-      "letra": "I wanna follow where she goes",
+      "letra": "I wanna follow where she goes\nI think about her and she knows it\nI wanna let her take control\n'Cause every time that she gets close, yeah\nShe pulls me in enough to keep me guessin', hmm\nAnd maybe I should stop and start confessin'\nConfessin', yeah\nOh, I've been shakin'\nI love it when you go crazy\nYou take all my inhibitions\nBaby, there's nothing holdin' me back\nYou take me places that tear up my reputation\nManipulate my decisions\nBaby, there's nothing holdin' me back\nThere's nothing holdin' me back\nThere's nothing holdin' me back\nShe says that she's never afraid\nJust picture everybody naked\nShe really doesn't like to wait\nNot really into hesitation",
       "artistaId": "1"
     },
     {
@@ -27,7 +32,7 @@
       "album": "Illuminate",
       "lanzamiento": "2016",
       "genero": "Pop",
-      "letra": "I wanna follow where she goes",
+      "letra": "I won't lie to you\nI know he's just not right for you\nAnd you can tell me if I'm off\nBut I see it on your face\nWhen you say that he's the one that you want\nAnd you're spending all your time\nIn this wrong situation\nAnd anytime you want it to stop\nI know I can treat you better than he can\nAnd any girl like you deserves a gentleman\nTell me, why are we wasting time\nOn all your wasted crying\nWhen you should be with me instead?\nI know I can treat you better\nBetter than he can",
       "artistaId": "1"
     },
     {
@@ -36,7 +41,7 @@
       "album": "Native",
       "lanzamiento": "2013",
       "genero": "Pop rock",
-      "letra": "I wanna follow where she goes",
+      "letra": "Lately, I've been\nI've been losing sleep\nDreaming about the things that we could be\nBut baby, I've been\nI've been praying hard\nSaid, no more counting dollars\nWe'll be counting stars\n\nYeah, we'll be counting stars\n\nI see this life like a swinging vine\nSwing my heart across the line\nAnd in my face is flashing signs\nSeek it out and ye' shall find\n\nOld, but I'm not that old\nYoung, but I'm not that bold\nAnd I don't think the world is sold\nOn just doing what we're told\n\nI feel something so right\nBy doing the wrong thing\nAnd I feel something so wrong\nBy doing the right thing\n\nI couldn't lie\nCouldn't lie, couldn't lie\nEverything that kills me\nMakes me feel alive",
       "artistaId": "2"
     },
     {
@@ -45,22 +50,26 @@
       "album": "Native",
       "lanzamiento": "2013",
       "genero": "Pop rock",
-      "letra": "I wanna follow where she goes",
-      "artistaId": "1"
+      "letra": "I stared up at the Sun\nThought of all other people, places and things I’ve loved\nI stared up just to see\nWith all of the faces, you were the one next to me\nYou can feel the light start to tremble\nWashing what you know out to sea\nYou can see your life out the window, tonight\n\nIf I lose myself tonight\nIt’ll be by your side\nI lose myself tonight\nIf I lose myself tonight\nIt’ll be you and I\nLose myself tonight\n\nI woke up with the Sun\nThought of all other people, places and things I’ve loved\nI woke up just to see\nWith all of the faces, you were the one next to me\nYou can feel the light start to tremble\nWashing what you know out to sea\nYou can see your life out the window, tonight\n\nIf I lose myself tonight",
+      "artistaId": "2"
     },
     {
-      "nombre": "asd",
-      "album": "sdf",
-      "lanzamiento": "123",
-      "genero": "Rock",
-      "letra": "dfg",
-      "artistaId": "1",
-      "id": "E-o0jOP",
-      "artista": {
-        "id": "2",
-        "nombre": "OneRepublic",
-        "idioma": "Ingles"
-      }
+      "nombre": "Feel Again",
+      "album": "Native",
+      "lanzamiento": "2015",
+      "genero": "Pop rock",
+      "letra": "It's been a long time coming since I've seen your face\nI've been everywhere and back trying to replace\nEverything that I had 'til my feet went numb\nPraying like a fool that's been on the run\nHeart's still beating, but it's not working\nIt's like a million dollar phone that you just can't ring\nI reached out tryna love, but I feel nothing\nYeah, my heart is numb\nBut with you\nI feel again\nYeah, with you\nI can feel again, yeah\nOoh\nOoh\nOoh\nOoh (feel again)\nI'm feeling better\nEver since you know me\nI was a lonely soul\nBut that's the old me\nA long time coming since I've seen your face\nI've been everywhere and back trying to replace\nEverything that I broke 'til my feet went numb\nPraying like a fool who just shot a gun\nHeart still beating, but it's not working\nIt's like a hundred thousand voices that just can't sing\nI reached out tryna love, but I feel nothing\nOh, my heart is numb\nBut with you\nI feel again\nYeah, with you\nI can feel again\nBut with you (I'm feeling better)\n(Ever since you know me) I feel again\n(I was a lonely soul)\n(But that's the old me) yeah, with you",
+      "artistaId": "2",
+      "id": "E-o0jOP"
+    },
+    {
+      "nombre": "Talking to the Moon",
+      "album": "Doo-Wops & Hooligans",
+      "lanzamiento": "2010",
+      "genero": "Pop",
+      "letra": "I know you're somewhere out there, somewhere far away\nI want you back, I want you back\nMy neighbors think I'm crazy, but they don't understand\nYou're all I had, you're all I had\nAt night, when the stars light up my room\nI sit by myself\nTalking to the moon\nTryna get to you\nIn hopes you're on the other side talking to me too\nOr am I a fool who sits alone talking to the moon?\nOh\nI'm feelin' like I'm famous, the talk of the town\nThey say I've gone mad, yeah, I've gone mad\nBut they don't know what I know, 'cause when the sun goes down\nSomeone's talking back, yeah, they're talking back, oh\nAt night, when the stars light up my room\nI sit by myself\nTalking to the moon\nTryna get to you\nIn hopes you're on the other side talking to me too\nOr am I a fool who sits alone talking to the moon?\nAh, ah, ah\nDo you ever hear me calling?\n(Ah) oh-oh-oh (ah), oh-oh-oh (ah)\n'Cause every night I'm talking to the moon\nStill tryna get to you\nIn hopes you're on the other side talking to me too\nOr am I a fool who sits alone talking to the moon?\nOh\nI know you're somewhere out there, somewhere far away",
+      "artistaId": "eblASlk",
+      "id": "TbUZRAD"
     }
   ]
 }

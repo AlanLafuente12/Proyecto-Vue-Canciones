@@ -1,29 +1,40 @@
 <template>
     <div>
-        <!--
         <Modal v-model:modelValue="showModalNuevo">
-            <MascotaNew @on-register="onRegister($event)"/>
+            <ArtistaNew @on-register="onRegister($event)"/>
         </Modal>
         <Modal v-model:modelValue="showModalEdit">
-            <MascotaEdit @on-update="onUpdate($event)" :item="itemToEdit"/>
+            <ArtistaEdit @on-update="onUpdate($event)" :item="itemToEdit"/>
         </Modal>
-        -->
         <h1>Artistas</h1>
-        <!--
         <button @click="showModalNuevo = true" class="btn btn-primary">Nuevo</button>
         <button @click="buscar()" class="btn btn-lith" style="float:right">Buscar</button>
-        -->
         <input type="search" style="float:right" v-model="textToSearch" @search="buscar()">
+
+        <div style="margin: 20px 0;">
+            <form @submit.prevent="filtrar()">
+                <label for="idioma"> Idioma: </label>
+                <select id="idioma" v-model="filter.idioma">
+                    <option value="">Todos</option>
+                    <option :value="idioma" v-for="(idioma, index) in idiomaList" :key="`idioma-${index}`">{{ idioma }}
+                    </option>
+                </select>
+                <button type="submit" class="btn btn-lith">Fitrar</button>
+            </form>
+        </div>
+        
         <table>
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Idioma</th>
                     <th></th>
                 </tr>
             </thead> 
             <tbody>
                 <tr v-for="(item, index) in itemList" :key="index">
                     <td>{{ item.nombre }}</td>
+                    <td>{{ item.idioma }}</td>
                     <td>
                         <button @click="verCanciones(item.id)" class="btn btn-dark" style="margin-right: 15px;">Ver canciones</button>
                         <button @click="edit(item)" class="btn btn-warning" style="margin-right: 15px;">Editar</button>
@@ -38,12 +49,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import Modal from '../../components/Modal.vue'
-// import MascotaNew from './MascotaNewView.vue'
-// import MascotaEdit from './MascotaEditView.vue'
+import ArtistaNew from './ArtistasNewView.vue'
+import ArtistaEdit from './ArtistasEditView.vue'
 
 
 export default {
-    name: 'CancionesView',
+    name: 'ArtistasView',
     data() {
         return {
             currentPage: 1,
@@ -52,20 +63,31 @@ export default {
             showModalEdit: false,
             itemToEdit: null,
             textToSearch: '',
-            itemList: []
+            itemList: [],
+            idiomaList: [
+                "Español",
+                "Ingles",
+                "Frances",
+                "Italiano",
+                "Portuges"
+            ],
+            textToFilter: '',
+            filter: {
+                idioma: ''
+            }
         }
     },
     components: {
         // Registro de componentes que se utilizaran.
         Modal,
-        // MascotaNew,
-        // MascotaEdit
+        ArtistaNew,
+        ArtistaEdit
     },
     methods: {
         // métodos que se pueden llamar desde la plantilla o desde otras partes del componente.
         getList() {
             const vm = this;
-            this.axios.get(this.baseUrl + "/artistas?&q=" + this.textToSearch)
+            this.axios.get(this.baseUrl + "/artistas?" + this.textToFilter + "&q=" + this.textToSearch)
                 .then(function (response) {
                     vm.itemList = response.data;
                 })
@@ -95,6 +117,13 @@ export default {
 
         },
         buscar() {
+            this.getList();
+        },
+        filtrar() {
+            this.textToFilter = '';
+            if (this.filter.idioma != '') {
+                this.textToFilter += "&idioma=" + this.filter.idioma;
+            }
             this.getList();
         },
         onRegister(event) {

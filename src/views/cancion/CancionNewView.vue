@@ -124,8 +124,8 @@
         console.log("/canciones")
         this.axios.post(this.baseUrl + "/canciones", this.form)
           .then(function (response) {
-            if (response.status == '200') {
-              vm.$emit('on-update', response.data);
+            if (response.status == '201') {
+              vm.$emit('on-register', response.data);
             }
             vm.itemList = response.data;
           })

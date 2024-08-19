@@ -5,16 +5,18 @@
         <div class="form-group">
           <label for="nombre">Nombre artista:</label>
           <input type="text" id="nombre" v-model="form.nombre" :class="{ 'is-invalid': errors.nombre }"
-            placeholder="Ingrese el nombre de la canción" />
+            placeholder="Ingrese el nombre del artista" />
           <div v-if="errors.nombre" class="invalid-feedback">{{ errors.nombre }}</div>
         </div> 
 
         <div class="form-group">
-          <label for="idioma">Idioma:</label>
-          <input type="text" id="idioma" v-model="form.idioma" :class="{ 'is-invalid': errors.idioma }"
-            placeholder="Ingrese el idioma" />
-          <div v-if="errors.idioma" class="invalid-feedback">{{ errors.idioma }}</div>
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" v-model="form.idioma" :class="{ 'is-invalid': errors.idioma }">
+                <option :value="idioma" v-for="(idioma, index) in idiomaList" :key="`idioma-${index}`">{{ idioma }}</option>
+            </select>
+            <div v-if="errors.idioma" class="invalid-feedback">{{ errors.idioma }}</div>
         </div>
+
   
         <button type="submit" class="btn btn-primary">Registrar</button>
       </form>
@@ -27,7 +29,14 @@
     name: 'ArtistaEdit',
     data() {
       return {
-        errors: {}
+        errors: {},
+        idiomaList: [
+            "Español",
+            "Ingles",
+            "Frances",
+            "Italiano",
+            "Portuges"
+        ],
       };
     },
     methods: {

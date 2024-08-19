@@ -12,6 +12,19 @@
 
         <button @click="buscar()" class="btn btn-lith" style="float:right">Buscar</button>
         <input type="search" style="float:right" v-model="textToSearch" @search="buscar()">
+        
+        <div style="margin: 20px 0;">
+            <form @submit.prevent="filtrar()">
+                <label for="genero"> Género: </label>
+                <select id="genero" v-model="filter.genero">
+                    <option value="">Todos</option>
+                    <option :value="genero" v-for="(genero, index) in generoList" :key="`genero-${index}`">{{ genero }}
+                    </option>
+                </select>
+                <button type="submit" class="btn btn-lith">Fitrar</button>
+            </form>
+        </div>
+        
         <table>
             <thead>
                 <tr>
@@ -52,13 +65,25 @@ export default {
     name: 'CancionesView',
     data() {
         return {
+            generoList: [
+                "Pop",
+                "Rock",
+                "Pop rock",
+                "Jazz",
+                "Hip Hop",
+                "Electronic",
+            ],
             currentPage: 1,
             totalPages: 100,
             showModalNuevo: false,
             showModalEdit: false,
             itemToEdit: null,
             textToSearch: '',
-            itemList: []
+            itemList: [],
+            textToFilter: '',
+            filter: {
+                genero: ''
+            }
         }
     },
     components: {
@@ -74,9 +99,9 @@ export default {
             const id = this.$route.params.id
             let ruta = "";
             if (id){
-                ruta = "/artista/"+id+"/canciones?_expand=artista"
+                ruta = "/artista/"+id+"/canciones?_expand=artista" + this.textToFilter 
             }else{
-                ruta = "/canciones?_expand=artista&q=" + this.textToSearch
+                ruta = "/canciones?_expand=artista" + this.textToFilter + "&q=" + this.textToSearch
             }
             this.axios.get(this.baseUrl + ruta)
                 .then(function (response) {
@@ -87,8 +112,7 @@ export default {
                 });
         },
         verCancion(id){
-            alert(id);
-            // this.$router.push("/canciones/"+id);
+            this.$router.push("/canciones/"+id);
         },
         edit(item) {
             this.itemToEdit = Object.assign({}, item);
@@ -109,6 +133,13 @@ export default {
 
         },
         buscar() {
+            this.getList();
+        },
+        filtrar() {
+            this.textToFilter = '';
+            if (this.filter.genero != '') {
+                this.textToFilter += "&genero=" + this.filter.genero;
+            }
             this.getList();
         },
         onRegister(event) {

@@ -43,7 +43,7 @@
 
         <div class="form-group">
           <label for="letra">Letra:</label>
-          <input type="text" id="letra" v-model="form.letra" :class="{ 'is-invalid': errors.letra }"
+          <textarea  type="text" id="letra" v-model="form.letra" :class="{ 'is-invalid': errors.letra }"
             placeholder="Ingrese la letra de la canción" />
           <div v-if="errors.letra" class="invalid-feedback">{{ errors.letra }}</div>
         </div>
@@ -113,7 +113,7 @@
       },
       save() {
         const vm = this;
-        console.log("/canciones")
+        delete this.form.artista;
         this.axios.patch(this.baseUrl + "/canciones/"+ this.item.id, this.form)
           .then(function (response) {
             if (response.status == '200') {
