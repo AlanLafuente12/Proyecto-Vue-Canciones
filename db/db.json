@@ -1,0 +1,66 @@
+{
+  "artistas": [
+    {
+      "id": "1",
+      "nombre": "Shawn Mendes",
+      "idioma": "Ingles"
+    },
+    {
+      "id": "2",
+      "nombre": "OneRepublic",
+      "idioma": "Ingles"
+    }
+  ],
+  "canciones": [
+    {
+      "id": "1",
+      "nombre": "There's Nothing Holdin' Me Back",
+      "album": "Illuminate",
+      "lanzamiento": "2016",
+      "genero": "Pop",
+      "letra": "I wanna follow where she goes",
+      "artistaId": "1"
+    },
+    {
+      "id": "2",
+      "nombre": "Treat You Better",
+      "album": "Illuminate",
+      "lanzamiento": "2016",
+      "genero": "Pop",
+      "letra": "I wanna follow where she goes",
+      "artistaId": "1"
+    },
+    {
+      "id": "3",
+      "nombre": "Counting Stars",
+      "album": "Native",
+      "lanzamiento": "2013",
+      "genero": "Pop rock",
+      "letra": "I wanna follow where she goes",
+      "artistaId": "2"
+    },
+    {
+      "id": "4",
+      "nombre": "If I Lose Myself",
+      "album": "Native",
+      "lanzamiento": "2013",
+      "genero": "Pop rock",
+      "letra": "I wanna follow where she goes",
+      "artistaId": "1"
+    },
+    {
+      "nombre": "asd",
+      "album": "sdf",
+      "lanzamiento": "123",
+      "genero": "Rock",
+      "letra": "dfg",
+      "artistaId": "1",
+      "id": "E-o0jOP",
+      "artista": {
+        "id": "2",
+        "nombre": "OneRepublic",
+        "idioma": "Ingles"
+      }
+    }
+  ]
+}
